@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  :root{
+    --color-base:#3D3D3D;
+    --color-purple:#6766C9;
+    --color-red:#FF2E85;
+    --color-blue:#2A98FE;
+    --color-gray:#EBEBEB;
+    --color-link-text:#7B7AFF;
+  }
+}
