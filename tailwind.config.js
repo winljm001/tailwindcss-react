@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        base: "var(--color-base)",
-        purple: "var(--color-purple)",
-        red: "var(--color-red)",
-        blue: "var(--color-blue)",
-        gray: "var(--color-gray)",
-        linkText: "var(--color-link-text)",
+        base: "rgba(var(--color-base), <alpha-value>)",
+        purple: "rgba(var(--color-purple), <alpha-value>)",
+        red: "rgba(var(--color-red), <alpha-value>)",
+        blue: "rgba(var(--color-blue), <alpha-value>)",
+        gray: "rgba(var(--color-gray), <alpha-value>)",
+        link: "rgba(var(--color-link), <alpha-value>)",
       },
     },
   },
