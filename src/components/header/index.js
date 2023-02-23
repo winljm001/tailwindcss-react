@@ -25,7 +25,7 @@ function Header() {
             })}
           </div>
           <div className="ml-10">
-            <div className="w-16 h-8 bg-[url('./static/images/swich_light.png')] bg-cover cursor-pointer"></div>
+            <div className="w-16 h-8 bg-[url('./static/images/switch_light.png')] bg-cover cursor-pointer"></div>
           </div>
         </div>
       </div>
