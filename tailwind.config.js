@@ -11,6 +11,9 @@ module.exports = {
         gray: "rgba(var(--color-gray), <alpha-value>)",
         link: "rgba(var(--color-link), <alpha-value>)",
       },
+      screens: {
+        mobile: { max: "768px" },
+      },
     },
   },
   plugins: [],

@@ -14,7 +14,7 @@
   }
 }
 
-@layer utilities {
+@layer components {
   .bg-animation {
     filter: blur(69px);
     will-change: transform;
