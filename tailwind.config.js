@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        base: "rgba(var(--color-base), <alpha-value>)",
+        main: "rgba(var(--color-main), <alpha-value>)",
         purple: "rgba(var(--color-purple), <alpha-value>)",
         red: "rgba(var(--color-red), <alpha-value>)",
         blue: "rgba(var(--color-blue), <alpha-value>)",
@@ -14,8 +14,10 @@ module.exports = {
       },
       backgroundImage: {
         logo: "var(--resource-logo)",
+        "link-icon": "var(--resource-bg-link)",
         switch: "var(--resource-bg-switch)",
         "switch-mobile": "var(--resource-bg-switch-mobile)",
+        mouse: "var(--resource-bg-mouse)",
       },
       screens: {
         mobile: { max: "768px" },

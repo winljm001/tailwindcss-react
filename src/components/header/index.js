@@ -21,8 +21,8 @@ function Header({ themeProps }) {
     setTheme(themeData?.[themeIndex] || themeData[0]);
   };
   return (
-    <div className="text-base">
-      <div className="flex justify-between pt-6 px-10">
+    <div className="text-main fixed w-screen">
+      <div className="flex justify-between pt-6 px-20 mobile:pt-8 mobile:px-10">
         <div className="flex items-center">
           <img
             src={theme === "dark" ? logo_dark : logo_light}
@@ -35,7 +35,7 @@ function Header({ themeProps }) {
         </div>
         <div className="flex items-center">
           <div
-            className={`text-2xl flex mobile:fixed mobile:inset-0 mobile:z-10 mobile:bg-bg-main/[0.6] mobile:flex-col mobile:justify-between mobile:items-center mobile:pt-60 group ${
+            className={`text-2xl flex mobile:fixed mobile:inset-0 mobile:z-10 mobile:bg-bg-main/[0.9] mobile:flex-col mobile:justify-between mobile:items-center mobile:pt-60 group ${
               state ? "" : "mobile:hidden"
             }`}
           >
@@ -67,13 +67,13 @@ function Header({ themeProps }) {
             onClick={toggle}
           >
             <div className="flex flex-col justify-between w-[20px] h-[20px]">
-              <div className="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10"></div>
-              <div className="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-75"></div>
-              <div className="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-150"></div>
+              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10"></div>
+              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-75"></div>
+              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-150"></div>
 
               <div className="absolute transform transition-all duration-500 top-2.5 -translate-x-10 group-[.active]:translate-x-0">
-                <div className="absolute bg-base h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-[.active]:rotate-45"></div>
-                <div className="absolute bg-base h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45"></div>
+                <div className="absolute bg-main h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-[.active]:rotate-45"></div>
+                <div className="absolute bg-main h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45"></div>
               </div>
             </div>
           </div>
