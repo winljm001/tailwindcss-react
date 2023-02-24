@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useBoolean } from "ahooks";
 import logo_light from "./images/logo_light.png";
 const navData = [
   { name: "发展", link: "#" },
   { name: "关于我们", link: "#" },
 ];
 function Header() {
+  const [state, { toggle }] = useBoolean(false);
   return (
     <div className="text-base min-h-screen">
       <div className="flex justify-between pt-6 px-10">
@@ -27,10 +29,23 @@ function Header() {
           <div className="ml-10">
             <div className="w-16 h-8 bg-[url('./static/images/switch_light.png')] bg-cover cursor-pointer mobile:w-6 mobile:h-6 mobile:bg-[url('./static/images/night.png')]"></div>
           </div>
-          <div className="hidden mobile:block ml-6">
-            <div className="w-[18px] h-[2px] bg-base" />
-            <div className="w-[18px] h-[2px] bg-base" />
-            <div className="w-[18px] h-[2px] bg-base" />
+
+          <div
+            class={`group ml-6 relative cursor-pointer overflow-hidden ${
+              state ? "active" : ""
+            }`}
+            onClick={toggle}
+          >
+            <div class="flex flex-col justify-between w-[20px] h-[20px]">
+              <div class="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10"></div>
+              <div class="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-75"></div>
+              <div class="bg-base h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-150"></div>
+
+              <div class="absolute transform transition-all duration-500 top-2.5 -translate-x-10 group-[.active]:translate-x-0">
+                <div class="absolute bg-base h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-[.active]:rotate-45"></div>
+                <div class="absolute bg-base h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
