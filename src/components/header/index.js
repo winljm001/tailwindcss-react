@@ -8,6 +8,7 @@ const navData = [
   { name: "关于我们", link: "#" },
 ];
 
+/** 只为快速实现：要知道的是这里传参是不合理的，使用状态管理就没有这个传参 */
 function Header({ themeProps }) {
   /** 移动端菜单menu展开关闭 */
   const [state, { toggle }] = useBoolean(false);
@@ -20,7 +21,7 @@ function Header({ themeProps }) {
     setTheme(themeData?.[themeIndex] || themeData[0]);
   };
   return (
-    <div className="text-base min-h-screen">
+    <div className="text-base">
       <div className="flex justify-between pt-6 px-10">
         <div className="flex items-center">
           <img

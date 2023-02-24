@@ -1,8 +1,9 @@
 import "./App.css";
 import Header from "./components/header";
+import HistoryPage from "./components/history";
 import { useLocalStorageState } from "ahooks";
 
-export const themeData = ["light", "dark", "blue", "red", "yellow"];
+export const themeData = ["light", "dark"];
 
 function App() {
   const [theme, setTheme] = useLocalStorageState("use-local-storage-theme", {
@@ -14,6 +15,7 @@ function App() {
       <div className="relative z-10">
         {/* 背景 */}
         <Header themeProps={{ theme, setTheme }} />
+        <HistoryPage />
       </div>
     </div>
   );
