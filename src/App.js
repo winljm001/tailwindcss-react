@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/header";
 import { useLocalStorageState } from "ahooks";
 
-export const themeData = ["light", "dark"];
+export const themeData = ["light", "dark", "blue", "red", "yellow"];
 
 function App() {
   const [theme, setTheme] = useLocalStorageState("use-local-storage-theme", {

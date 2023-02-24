@@ -23,6 +23,27 @@
     --resource-bg-switch:url('./static/images/switch_dark.png');
     --resource-bg-switch-mobile:url('./static/images/daylight.png');
   }
+  .blue{
+    --color-base: 188, 188, 255;
+    --color-link: 255, 255, 255;
+    --color-bg-main: 0, 0, 255;
+    --resource-bg-switch:url('./static/images/switch_dark.png');
+    --resource-bg-switch-mobile:url('./static/images/daylight.png');
+  }
+  .red{
+    --color-base: 255, 188, 188;
+    --color-link: 255, 255, 255;
+    --color-bg-main: 255, 0, 0;
+    --resource-bg-switch:url('./static/images/switch_dark.png');
+    --resource-bg-switch-mobile:url('./static/images/daylight.png');
+  }
+  .yellow{
+    --color-base: 188, 255, 188;
+    --color-link: 255, 255, 255;
+    --color-bg-main: 0, 255, 0;
+    --resource-bg-switch:url('./static/images/switch_dark.png');
+    --resource-bg-switch-mobile:url('./static/images/daylight.png');
+  }
 }
 
 @layer components {
