@@ -11,27 +11,40 @@ function Header() {
     <div className="text-base min-h-screen">
       <div className="flex justify-between pt-6 px-10">
         <div className="flex items-center">
-          <img src={logo_light} alt="" className="w-10 h-10" />
+          <img
+            src={logo_light}
+            alt=""
+            className="w-10 h-10 mobile:relative mobile:z-20"
+          />
           <span className="ml-4 font-normal text-2xl mobile:hidden">
             BLOG OF FRONT END
           </span>
         </div>
         <div className="flex items-center">
-          <div className="text-2xl">
+          <div
+            className={`text-2xl flex mobile:fixed mobile:inset-0 mobile:z-10 mobile:bg-[#fff]/[0.6] mobile:flex-col mobile:justify-between mobile:items-center mobile:pt-60 group ${
+              state ? "" : "mobile:hidden"
+            }`}
+          >
             {navData?.map((v, i) => {
               return (
-                <a href={v?.link} key={i} className="mr-6 last:mr-0">
+                <a
+                  href={v?.link}
+                  key={i}
+                  className="mr-6 last:mr-0 mobile:mr-0"
+                >
                   {v?.name}
                 </a>
               );
             })}
+            <div className="hidden mobile:block mobile:basis-1/5" />
           </div>
           <div className="ml-10">
-            <div className="w-16 h-8 bg-[url('./static/images/switch_light.png')] bg-cover cursor-pointer mobile:w-6 mobile:h-6 mobile:bg-[url('./static/images/night.png')]"></div>
+            <div className="w-16 h-8 bg-[url('./static/images/switch_light.png')] bg-cover cursor-pointer mobile:w-6 mobile:h-6 mobile:bg-[url('./static/images/night.png')] mobile:relative mobile:z-20"></div>
           </div>
 
           <div
-            class={`group ml-6 relative cursor-pointer overflow-hidden hidden mobile:block ${
+            class={`group ml-6 relative cursor-pointer overflow-hidden hidden mobile:block mobile:z-20 ${
               state ? "active" : ""
             }`}
             onClick={toggle}
