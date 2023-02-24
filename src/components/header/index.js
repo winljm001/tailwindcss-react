@@ -31,7 +31,7 @@ function Header() {
           </div>
 
           <div
-            class={`group ml-6 relative cursor-pointer overflow-hidden ${
+            class={`group ml-6 relative cursor-pointer overflow-hidden hidden mobile:block ${
               state ? "active" : ""
             }`}
             onClick={toggle}
