@@ -10,6 +10,12 @@ module.exports = {
         blue: "rgba(var(--color-blue), <alpha-value>)",
         gray: "rgba(var(--color-gray), <alpha-value>)",
         link: "rgba(var(--color-link), <alpha-value>)",
+        "bg-main": "rgba(var(--color-bg-main), <alpha-value>)",
+      },
+      backgroundImage: {
+        logo: "var(--resource-logo)",
+        switch: "var(--resource-bg-switch)",
+        "switch-mobile": "var(--resource-bg-switch-mobile)",
       },
       screens: {
         mobile: { max: "768px" },

@@ -5,12 +5,23 @@
 
 @layer base {
   :root{
+    
     --color-base: 61, 61, 61;
     --color-purple: 103, 102, 201;
     --color-red: 255, 46, 133;
     --color-blue: 42, 152, 254;
     --color-gray: 235, 235, 235;
     --color-link: 123, 122, 255;
+    --color-bg-main: 255, 255, 255;
+    --resource-bg-switch:url('./static/images/switch_light.png');
+    --resource-bg-switch-mobile:url('./static/images/night.png');
+  }
+  .dark{
+    --color-base: 255, 255, 255;
+    --color-link: 255, 255, 255;
+    --color-bg-main: 18, 18, 18;
+    --resource-bg-switch:url('./static/images/switch_dark.png');
+    --resource-bg-switch-mobile:url('./static/images/daylight.png');
   }
 }
 
