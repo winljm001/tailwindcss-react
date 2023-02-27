@@ -18,6 +18,8 @@ module.exports = {
         switch: "var(--resource-bg-switch)",
         "switch-mobile": "var(--resource-bg-switch-mobile)",
         mouse: "var(--resource-bg-mouse)",
+        js: "var(--resource-js)",
+        ts: "var(--resource-ts)",
       },
       screens: {
         mobile: { max: "768px" },

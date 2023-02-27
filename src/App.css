@@ -16,6 +16,8 @@
     --resource-bg-switch-mobile:url('./static/images/common/night.png');
     --resource-bg-link:url('./static/images/history/link.png');
     --resource-bg-mouse:url('./static/images/history/mouse.png');
+    --resource-js:url('./static/images/history/js.png');
+    --resource-ts:url('./static/images/history/ts.png');
   }
   .dark{
     --color-main: 255, 255, 255;
@@ -25,6 +27,8 @@
     --resource-bg-switch-mobile:url('./static/images/common/daylight.png');
     --resource-bg-link:url('./static/images//history/link_dark.png');
     --resource-bg-mouse:url('./static/images/history/mouse_dark.png');
+    --resource-js:url('./static/images/history/js_dark.png');
+    --resource-ts:url('./static/images/history/ts_dark.png');
   }
 }
 

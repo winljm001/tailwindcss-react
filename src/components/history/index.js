@@ -23,7 +23,11 @@ function HistoryPage() {
             </div>
           </a>
         </div>
-        <div className="w-1/2"></div>
+        <div className="w-1/2 relative">
+          <div className="bg-js w-[336px] h-[336px] bg-cover absolute top-[66px] right-[10vw] z-10" />
+          <div className="bg-ts w-[184px] h-[184px] bg-cover absolute top-[172px] right-[4.65vw] z-0" />
+          <div />
+        </div>
       </div>
       <div className="w-[42px] h-[89px] bg-mouse bg-cover self-center mt-20"></div>
     </div>
