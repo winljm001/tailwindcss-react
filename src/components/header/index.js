@@ -21,7 +21,7 @@ function Header({ themeProps }) {
   };
   return (
     <div className="text-main fixed w-screen">
-      <div className="flex justify-between pt-6 px-20 mobile:pt-8 mobile:px-10">
+      <div className="flex justify-between pt-6 px-20 mobile:pt-8 mobile:px-8">
         <div className="flex items-center">
           <img
             src={theme === "dark" ? logo_dark : logo_light}
