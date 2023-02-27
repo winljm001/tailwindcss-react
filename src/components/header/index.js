@@ -20,21 +20,21 @@ function Header({ themeProps }) {
     setTheme(themeData?.[themeIndex] || themeData[0]);
   };
   return (
-    <div className="text-main fixed w-screen">
-      <div className="flex justify-between pt-6 px-20 mobile:pt-8 mobile:px-8">
+    <div className="fixed w-screen text-main">
+      <div className="flex justify-between px-20 pt-6 mobile:px-8 mobile:pt-8">
         <div className="flex items-center">
           <img
             src={theme === "dark" ? logo_dark : logo_light}
             alt=""
-            className="w-10 h-10 mobile:relative mobile:z-20"
+            className="h-10 w-10 mobile:relative mobile:z-20"
           />
-          <span className="ml-4 font-normal text-2xl mobile:hidden">
+          <span className="ml-4 text-2xl font-normal mobile:hidden">
             BLOG OF FRONT END
           </span>
         </div>
         <div className="flex items-center">
           <div
-            className={`text-2xl flex mobile:fixed mobile:inset-0 mobile:z-10 mobile:bg-bg-main/[0.9] mobile:flex-col mobile:justify-between mobile:items-center mobile:pt-60 group ${
+            className={`group flex text-2xl mobile:fixed mobile:inset-0 mobile:z-10 mobile:flex-col mobile:items-center mobile:justify-between mobile:bg-bg-main/[0.9] mobile:pt-60 ${
               state ? "" : "mobile:hidden"
             }`}
           >
@@ -53,26 +53,26 @@ function Header({ themeProps }) {
           </div>
           <div className="ml-10">
             <div
-              className="w-16 h-8 bg-switch bg-cover cursor-pointer 
-            mobile:w-6 mobile:h-6 mobile:bg-switch-mobile mobile:relative mobile:z-20"
+              className="h-8 w-16 cursor-pointer bg-switch bg-cover 
+            mobile:relative mobile:z-20 mobile:h-6 mobile:w-6 mobile:bg-switch-mobile"
               onClick={changeTheme}
             />
           </div>
 
           <div
-            className={`group ml-6 relative cursor-pointer overflow-hidden hidden mobile:block mobile:z-20 ${
+            className={`group relative ml-6 hidden cursor-pointer overflow-hidden mobile:z-20 mobile:block ${
               state ? "active" : ""
             }`}
             onClick={toggle}
           >
-            <div className="flex flex-col justify-between w-[20px] h-[20px]">
-              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10"></div>
-              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-75"></div>
-              <div className="bg-main h-[2px] w-[18px] transform transition-all duration-300 group-[.active]:translate-x-10 delay-150"></div>
+            <div className="flex h-[20px] w-[20px] flex-col justify-between">
+              <div className="h-[2px] w-[18px] transform bg-main transition-all duration-300 group-[.active]:translate-x-10"></div>
+              <div className="h-[2px] w-[18px] transform bg-main transition-all delay-75 duration-300 group-[.active]:translate-x-10"></div>
+              <div className="h-[2px] w-[18px] transform bg-main transition-all delay-150 duration-300 group-[.active]:translate-x-10"></div>
 
-              <div className="absolute transform transition-all duration-500 top-2.5 -translate-x-10 group-[.active]:translate-x-0">
-                <div className="absolute bg-main h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-[.active]:rotate-45"></div>
-                <div className="absolute bg-main h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45"></div>
+              <div className="absolute top-2.5 -translate-x-10 transform transition-all duration-500 group-[.active]:translate-x-0">
+                <div className="absolute h-[2px] w-5 rotate-0 transform bg-main transition-all delay-300 duration-500 group-[.active]:rotate-45"></div>
+                <div className="absolute h-[2px] w-5 -rotate-0 transform bg-main transition-all delay-300 duration-500 group-[.active]:-rotate-45"></div>
               </div>
             </div>
           </div>
